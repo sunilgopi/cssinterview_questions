@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css interview Questions</title>
+    <style>
+        .header
+        {
+            text-align: center;
+            font-weight: 900;
+            text-decoration: underline;
+            
+            
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            color: #333;
+        }
+
+        a {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #45a049;
+        }
+
+        details {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            padding: 15px;
+            width: 80%;
+            text-align: left;
+            transition: box-shadow 1s ease;
+        }
+
+        details summary {
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        details[open] {
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        details p {
+            font-size: 16px;
+            color: #666;
+            margin: 0;
+            line-height: 20px;
+        }
+        pre{
+            font-size: 16px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 300;
+        }
+
+        @media (max-width: 600px) {
+            details {
+                width: 95%;
+            }
+
+            details summary {
+                font-size: 16px;
+            }
+
+            details p {
+                font-size: 14px;
+            }
+            
+        }
+    </style>
+</head>
+
+<body>
+
+   <div class="header">
+    <h1>Interview Questions</h1>
+   </div>
+
+    <details>
+        <summary>what is css?why do we use it?</summary>
+        <p>CSS (Cascading Style Sheets) is a style sheet language used to control the visual presentation of web pages. It describes how HTML elements should be displayed on screen, paper, or other media.</p>
+    </details>
+
+    <details>
+        <summary>In how many ways can we create css styling?What are they?</summary>
+        <p>CSS styling can be created in three ways: <br>
+
+            Inline CSS: Applied directly within HTML elements using the style attribute. <br>
+            Internal CSS: Defined in a style block inside the head section of an HTML page. <br>
+            External CSS: Written in a separate .css file and linked to the HTML using the link tag. </p>
+    </details>
+
+    <details>
+        <summary>d.f b/w 3 ways of css styling?
+        </summary>
+        <p> Inline for quick individual styling, Internal for page-specific styling, and External for consistent, reusable styling across pages.</p>
+    </details>
+
+    <details>
+        <summary>What is specificity among the ways of css styling?</summary>
+        <p>**CSS specificity** is a ranking system used by browsers to determine which styles to apply when multiple styles target the same element. It’s calculated based on the type of CSS selector used: <br>
+
+            - **Inline styles** have the highest specificity. <br>
+            - **ID selectors** (`#id`) are stronger than class selectors or element selectors. <br>
+            - **Class selectors** (`.class`) are stronger than element selectors (`p`, `h1`). <br>
+            - **Element selectors** have the lowest specificity. <br>
+            
+            When styles conflict, the rule with the highest specificity is applied.</p>
+    </details>
+
+    <details>
+        <summary>What is the syntax of css?</summary>
+        <p>The syntax of CSS consists of a selector and a declaration block. <br>
+
+            Selector: Specifies which HTML element(s) to style. <br>
+            Declaration Block: Contains one or more declarations enclosed in curly braces {}. Each declaration includes: <br>
+            Property: The CSS attribute you want to style (e.g., color, font-size). <br>
+            Value: The value for the property (e.g., blue, 16px).</p>
+    </details>
+
+    <details>
+        <summary>What is a selector?</summary>
+        <p>A CSS selector is a pattern used to target and select the HTML elements you want to style. It allows you to apply specific styles to elements based on their tag, class, ID, or other attributes</p>
+    </details>
+
+    <details>
+        <summary>How many types of selectors?
+        </summary>
+        <p>There are five main types of CSS selectors: <br>
+
+            1. **Universal Selector (`*`)**: Selects all elements. <br>
+            2. **Type Selector (Element Selector)**: Selects elements by tag name (e.g., `h1`, `p`). <br>
+            3. **Class Selector (`.className`)**: Selects elements with a specific class attribute. <br>
+            4. **ID Selector (`#idName`)**: Selects an element with a specific ID. <br>
+            5. **Attribute Selector**: Selects elements based on attributes (e.g., `[type="text"]`). <br>
+            
+            Each type targets different elements to apply styles efficiently.</p>
+    </details>
+
+    <details>
+        <summary>What is d/f b/w the pseudo class vs pseudo element?</summary>
+        <p>A pseudo-class targets an element based on its state (e.g., :hover, :focus, :nth-child), whereas a pseudo-element targets a specific part of an element's content (e.g., ::before, ::after, ::first-letter).</p>
+    </details>
+
+    <details>
+        <summary>What is rule set?</summary>
+        <p>A rule set in CSS is a block of code that defines the styling for one or more HTML elements. It consists of a selector and a declaration block.</p>
+    </details>
+
+    <details>
+        <summary>What is box-modal?</summary>
+        <p>Box model is a fundamental concept in CSS that describes the rectangular boxes generated for elements in a web page layout. Each box consists of four components: <br>
+
+            Content: The actual content of the element (text, images, etc.). <br>
+            Padding: The space between the content and the border, which adds space inside the box. <br>
+            Border: The line surrounding the padding (if any) and content. <br>
+            Margin: The space outside the border, which separates the element from other elements</p>
+    </details>
+    
+    <details>
+        <summary>What is the difference between border and outLine?</summary>
+        <p> <b>Border: </b> A border is a line that wraps around an element's content and padding. It affects the layout by contributing to the element's size and can be styled with different widths, colors, and styles (solid, dashed, etc.). <br>
+
+           <b> Outline:</b> An outline is a line that surrounds an element but does not take up space or affect the layout. It is drawn outside the border and can also be styled with different widths and colors</p>
+    </details>
+
+    <details>
+        <summary>Types of colors we have in css?</summary>
+        <p>In CSS, there are several types of colors you can use: <br>
+
+           <b> Named Colors:</b> Predefined color names (e.g., red, blue, green).  <br>
+            
+            <b>Hexadecimal Colors:</b> A six-digit code representing colors (e.g., #ff5733). <br>
+            
+           <b> RGB Colors:</b> Defines colors using the red, green, and blue components (e.g., rgb(255, 87, 51)). <br>
+            
+           <b> RGBA Colors:</b> Similar to RGB but includes an alpha value for transparency (e.g., rgba(255, 87, 51, 0.5)). <br>
+            
+            <b>HSL Colors:</b> Defines colors using hue, saturation, and lightness (e.g., hsl(12, 100%, 60%)). <br>
+            
+          <b>  HSLA Colors:</b> Similar to HSL but includes an alpha value for transparency (e.g., hsla(12, 100%, 60%, 0.5)).</p>
+    </details>
+
+    <details>
+        <summary>What is opacity?</summary>
+        <p>**Opacity** is a CSS property that determines the transparency level of an element. It ranges from `0` (completely transparent) to `1` (completely opaque). For example, setting `opacity: 0.5` makes the element semi-transparent, allowing the background to show through. It can be useful for layering elements and creating visual effects.</p>
+    </details>
+
+    <details>
+        <summary>What are shadows in css and how many are they? 
+        </summary>
+        <p>In CSS, shadows refer to the visual effects that create the illusion of depth by adding shadows to elements. The two main types of shadows are: <br>
+
+             <b>**Box Shadow**</b> (`box-shadow`): Adds a shadow effect around an element's box (like a div or button). It can specify horizontal and vertical offsets, blur radius, spread radius, and color. <br>
+            
+               ```css
+               box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); <br>
+               ```
+            
+             <b>**Text Shadow**</b> (`text-shadow`): Applies a shadow effect to text, enhancing its visibility and style. It also accepts offsets, blur radius, and color. <br>
+            
+               ```css
+              <b> text-shadow:</b> 1px 1px 3px rgba(0, 0, 0, 0.7); <br>
+               ```
+            
+            These shadows enhance the visual aesthetics of web elements, making them stand out and improving the user experience.</p>
+    </details>
+
+    <details>
+        <summary>What are gradients in css and how many are they?</summary>
+        <p>Gradients in CSS are smooth transitions between two or more colors. They can be used as backgrounds or for other styling effects. <br>
+
+           <b> Types of CSS Gradients:</b>  <br>
+            Linear Gradients: Transition along a straight line. Defined with the linear-gradient() function. <br>
+            
+            Example: background: linear-gradient(to right, red, yellow); <br>
+            Radial Gradients: Transition outward from a central point. Defined with the radial-gradient() function. <br>
+            
+            Example: background: radial-gradient(circle, red, yellow); <br>
+            Conic Gradients: Transition around a central point, creating a pie-like effect. Defined with the conic-gradient() function.</p>
+    </details>
+
+    <details>
+        <summary>What is the d/f b/w display and float? </summary>
+        <p>Display <br>
+            Purpose: Controls how an element is rendered in the document flow.  <br>
+            Common Values: block, inline, inline-block, flex, grid, etc. <br>
+            Effect: Alters the element's box model and how it interacts with surrounding elements. <br>
+            Float <br>
+            Purpose: Allows elements to be positioned to the left or right of their container, enabling text and inline elements to wrap around them. <br>
+            Common Values: left, right, none. <br>
+            Effect: Removes the element from the normal document flow, which can lead to layout challenges if not cleared properly.</p>
+    </details>
+
+    <details>
+        <summary>What is d/f b/w the display:inline vs display:block vs display:inline-block?</summary>
+        <p>display: block: Elements take up the full width available and start on a new line. Examples include div and p. They create a "block" structure. <br>
+
+            display: inline: Elements only take up as much width as necessary and do not start on a new line. Examples include span and a. They flow within the content, allowing other elements to sit next to them. <br>
+            
+            display: inline-block: Combines characteristics of both. Elements flow inline like inline elements but can have width and height set, and margins/padding applied. This is useful for creating layouts without breaking the flow.</p>
+    </details>
+    
+    <details>
+        <summary>what is d/f b/w the visibility:hidden and display:none?</summary>
+        <p>visibility: hidden vs. display: none: <br>
+
+            visibility: hidden: The element is hidden but still occupies space in the layout. It's invisible to the user but can still affect the positioning of other elements. <br>
+            
+            display: none: The element is completely removed from the document flow, meaning it does not occupy any space. Other elements behave as if it does not exist.</p>
+    </details>
+
+    <details>
+        <summary>what is object-fit ? and in how  many types can we fit the object?</summary>
+        <p>object-fit is a CSS property that defines how an element, typically an img or video, should be resized to fit its container. It controls the content's sizing and alignment, ensuring it displays correctly within the given dimensions. <br>
+
+           <b> Types of object-fit Values:</b>
+           <b> fill:</b> The default value. The content stretches to fill the container, which may distort the aspect ratio. <br>
+            <b>contain:</b> The content scales to fit within the container while maintaining its aspect ratio. The entire object is made to fit, possibly leaving empty space. <br>
+           <b> cover:</b> The content scales to cover the entire container while preserving its aspect ratio. Parts of the content may be clipped to fill the space. <br>
+           <b> none:</b> The content retains its original size, which may result in overflow if it exceeds the container's dimensions. <br>
+           <b> scale-down:</b> The content is sized as none or contain, whichever results in a smaller size.</p>
+    </details>
+
+    <details>
+        <summary>What is background property? what are the properties of background do you know?</summary>
+        <p>The background property in CSS is a shorthand property used to set multiple background-related properties for an element in a single declaration. It allows you to control the background color, image, position, size, repeat, and attachment. <br>
+
+            Key Properties of the Background: <br>
+            <b>background-color:</b> Sets the background color of an element. <br>
+           <b> background-image:</b> Specifies an image to be used as the background. <br>
+            <b>background-repeat:</b> Defines how the background image is repeated (e.g., no-repeat, repeat, repeat-x, repeat-y). <br>
+           <b> background-position:</b> Sets the starting position of the background image (e.g., center, top right, etc.). <br>
+          <b>  background-size:</b> Specifies the size of the background image (e.g., cover, contain, or specific dimensions). <br>
+            <b>background-attachment:</b> Controls whether the background image scrolls with the page or is fixed (e.g., scroll, fixed, local).</p>
+    </details>
+    <details>
+        <summary>what is the position property?</summary>
+        <p>The position property in CSS determines how an element is positioned in the document flow. It has several values: <br>
+
+           <b> static:</b> Default value; elements are positioned according to the normal flow of the document. <br>
+           <b> relative:</b> Positioned relative to its normal position; allows for offsets using top, right, bottom, and left. <br>
+            <b>absolute:</b> Positioned relative to the nearest positioned ancestor (not static); removed from the normal flow. <br>
+         <b>   fixed:</b> Positioned relative to the viewport; remains in the same place even when the page is scrolled. <br>
+            <b> fixed: </b>Toggles between relative and fixed, depending on the scroll position.</p>
+    </details>
+
+    <details>
+        <summary>What is overflow in css?</summary>
+        <p>Overflowing in CSS refers to the situation when an element's content exceeds its specified width or height. This can result in content being cut off or overflowing outside the container. <br>
+
+            <b>CSS Overflow Properties:</b> <br>
+            <b>visible:</b> Content is not clipped and will overflow the element. <br>
+          <b>  hidden:</b> Content is clipped, and the overflow is not visible. <br>
+          <b>  scroll:</b> Content is clipped, but scrollbars are added to view the overflow. <br>
+           <b> auto:</b> Scrollbars appear only if the content overflows.</p>
+    </details>
+
+    <details>
+        <summary>What is z-index in css? default value of z-index?</summary>
+        <p>z-index in CSS controls the stacking order of elements on the z-axis. Elements with a higher z-index appear above those with a lower z-index. The default value is auto, meaning elements stack in the order they are defined in the HTML."</p>
+    </details>
+    
+    <details>
+        <summary>What is a clear property? </summary>
+        <p>The clear property in CSS is used to control the behavior of floating elements. It specifies whether an element should be moved below (cleared) any preceding floated elements. <br>
+
+          <b>  Values:</b> <br>
+           <b> left:</b> The element is moved below any left-floated elements. <br>
+         <b>   right: </b>The element is moved below any right-floated elements. <br>
+           <b> both:</b> The element is moved below all floated elements. <br>
+         <b>   none:</b> The default; the element can sit next to floated elements.</p>
+    </details>
+
+    <details>
+        <summary>What are the css variables?</summary>
+        <p>CSS variables, also known as custom properties, are entities defined by CSS authors that hold specific values. They can be reused throughout a stylesheet, making it easier to manage and maintain CSS.
+        <br>
+        syntax: <br>
+        <pre>
+            :root {
+                --main-color: #3498db;
+                --font-size: 16px;
+            }
+        </pre>
+        <br>
+        useage: <br>
+       <pre>
+        body {
+            background-color: var(--main-color);
+            font-size: var(--font-size);
+        }
+        
+       </pre>
+        </p>
+    </details>
+
+    <details>
+        <summary>What is meaning of :root in css?</summary>
+        <p>In CSS, :root is a pseudo-class that matches the document's root element, typically the <html> element in HTML documents. It is often used to define global CSS variables (custom properties) that can be accessed throughout the stylesheet.</p>
+    </details>
+
+    <details>
+        <summary>What are text properties?
+        </summary>
+        <p>Text properties in CSS control the appearance of text within an element. Key properties include: <br>
+
+          <b>  color:</b> Sets the text color. <br>
+         <b>   font-family:</b> Specifies the typeface (e.g., Arial, Times New Roman). <br>
+            <b>font-size:</b> Defines the size of the text. <br>
+           <b> font-weight:</b> Controls the thickness of the text (e.g., normal, bold). <br>
+           <b> text-align:</b> Aligns the text (e.g., left, center, right). <br>
+           <b> line-height: </b>Sets the space between lines of text. <br>
+           <b> text-decoration:</b> Adds decoration to text (e.g., underline, overline).</p>
+    </details>
+
+    <details>
+        <summary> How can we format text in CSS?</summary>
+        <pre>
+CSS text formatting includes the following properties:
+
+Text-color
+Text-alignment
+Text-decoration
+Text-transformation
+Text-indentation
+Letter spacing
+Line height
+Text-direction
+Text-shadow
+Word spacing
+        </pre>
+    </details>
+
+    <details>
+        <summary>What is flex box in css?</summary>
+        <p>Flexbox, or the Flexible Box Layout, is a CSS layout model that allows for efficient arrangement of space and alignment of items within a container. It enables developers to create responsive designs easily by distributing space among items in a one-dimensional layout, either horizontally or vertically.</p>
+    </details>
+
+    <details>
+        <summary>What is grid in css?</summary>
+        <p>A grid layout system is a design framework that allows you to create complex web layouts using a grid-based approach. It divides the page into rows and columns, enabling precise alignment and positioning of elements.</p>
+    </details>
+    
+    <details>
+        <summary>What are media queries in css? why do we need to use them?
+        </summary>
+        <p>
+            Media queries in CSS are a feature that allows you to apply styles based on the characteristics of the device displaying the content, such as its width, height, orientation, or resolution.</p>
+    </details>
+
+    <details>
+        <summary>What are transitions in css?</summary>
+        <p>CSS transitions allow you to create smooth animations when CSS properties change. They enable you to specify how long the transition should take, the timing function, and the properties that will animate when an element’s state changes (like on hover).</p>
+    </details>
+
+    <details>
+        <summary>What are the transforms in css? (rotate (),scale(),skew(),translate())
+        </summary>
+       <pre>CSS transforms allow you to change the shape, size, and position of elements in a 2D or 3D space without altering the document flow. Here are the main types:
+
+        rotate(): Rotates an element around a specified point.
+        
+        Usage: transform: rotate(45deg);
+        scale(): Changes the size of an element.
+        
+        Usage: transform: scale(1.5); (1.5 means 150% of the original size)
+        skew(): Distorts an element along the X and Y axes.
+        
+        Usage: transform: skew(30deg, 20deg);
+        translate(): Moves an element from its original position.
+        
+        Usage: transform: translate(50px, 100px);</pre>
+    </details>
+
+    
+    <details>
+        <summary>How can you center a div? display:grid,place-items:center</summary>
+        <pre>To center a <div> using CSS Grid, you can use the following code:
+
+            <b>css</b>
+            
+            .container {
+              display: grid;
+              height: 100vh; /* or any height */
+              place-items: center;
+            }
+            In this code:
+            
+            display: grid; enables grid layout on the container.
+            place-items: center; centers the content both vertically and horizontally within the container.
+            This method is efficient and works well for centering content.
+            
+            
+            
+            
+            
+            
+            </pre>
+    </details>
+
+    <details>
+        <summary>what is d.f b/w the transitions  vs transforms vs animations?</summary>
+        <pre>
+            In CSS:
+
+### Transitions
+- **Definition**: Allow property changes in CSS values to occur smoothly over a specified duration.
+- **Usage**: Triggered by state changes (e.g., hover).
+- **Example**: Changing the background color when a button is hovered over.
+
+### Transforms
+- **Definition**: Modify the coordinate space of an element, allowing for transformations like scaling, rotating, skewing, and translating.
+- **Usage**: Applied immediately without a duration.
+- **Example**: Rotating an image or moving a box.
+
+### Animations
+- **Definition**: Allow for more complex sequences of styles that can change over time, including keyframes for detailed control.
+- **Usage**: Can run automatically and loop.
+- **Example**: A loading spinner that rotates continuously.
+
+In summary:
+- **Transitions**: Smooth changes on state change.
+- **Transforms**: Immediate visual changes to an element.
+- **Animations**: Complex sequences with keyframes and control over multiple properties.
+        </pre>
+    </details>
+
+    
+    <details>
+        <summary>What is a matrix in transforms? 
+        </summary>
+        <p>In CSS transforms, a matrix is a mathematical representation used to define transformations such as translation, rotation, scaling, and skewing of elements. The matrix is a 2D array that combines these transformations into a single function. It allows for complex transformations by manipulating the element's position and size in a coordinate space.</p>
+    </details>
+
+    <details>
+        <summary>d/f b/w css and css3?</summary>
+       <pre>
+        Version:
+
+CSS: Refers to the original specification and earlier versions (CSS1 and CSS2).
+CSS3: The latest version that introduced new features and modules.
+Features:
+
+CSS: Basic styling capabilities like colors, fonts, and layouts.
+CSS3: Enhanced features such as animations, transitions, gradients, and responsive design with media queries.
+Modularization:
+
+CSS: A single specification.
+CSS3: Divided into modules, allowing for incremental updates and new features without overhauling the entire specification.
+In summary, CSS3 expands the capabilities of CSS by adding advanced styling options and greater flexibility for web design.
+
+
+
+
+
+
+
+       </pre>
+    </details>
+
+
+
+
+</body>
+
+</html>
